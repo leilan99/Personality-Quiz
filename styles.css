@@ -1,0 +1,58 @@
+p, button, .question, .result {
+    font-family: Lexend Deca;
+}
+
+h1, h2 {
+    font-family: Lexend Deca;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: Lexend Deca;
+    font-weight: 400;
+}
+
+body {
+    background-color: #55423d;
+}
+
+.quiz-container {
+    background-color: #e8e4e6;
+    margin: 8% 20% 8% 20%;
+    padding: 2% 10%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ffc0ad;
+    border-color: #ffc0ad;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 1px 10px;
+}
+
+.option {
+    display: flex;
+    font-family: Lexend Deca;
+    background-color: #ffc0ad;
+    border-radius: 15px;
+    padding: 3% 2%;
+    width: 40%;
+    height: 100px;
+    align-items: center;
+}
+
+.option:hover {
+    opacity: 120%;
+    transform: scale(1.05);
+}
+
+.options-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
