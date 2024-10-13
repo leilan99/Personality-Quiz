@@ -90,6 +90,7 @@ button {
 
     .option:hover {
         opacity: 120%;
+        transform: none;
     }
 }
 
@@ -122,5 +123,6 @@ button {
 
     .option:hover {
         opacity: 120%;
+        transform: none;
     }
 }
