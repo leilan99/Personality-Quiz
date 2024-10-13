@@ -87,6 +87,10 @@ button {
         flex-direction: column;
         gap: 15px;
     }
+
+    .option:hover {
+        opacity: 120%;
+    }
 }
 
 
@@ -114,5 +118,9 @@ button {
 
     .options-container {
         gap: 10px;
+    }
+
+    .option:hover {
+        opacity: 120%;
     }
 }
