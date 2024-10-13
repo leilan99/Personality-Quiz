@@ -1,7 +1,7 @@
 const quizQuestions = [
     {
         question: "CREEEAKK! A hidden door just opened in the corner of your room. Behind, you see a cozy fire crackling and twinkling lights across the ceiling. What do you do first?",
-        image: "",
+        image: "assets/q1.webp",
         options: [
             {text: "Pick up the coat rack by the door...just in case.", type: "A"},
             {text: "Take a peek at the enchanted library to see if you can learn any spells.", type: "B"}
@@ -9,7 +9,7 @@ const quizQuestions = [
     },
     {
         question: "There's a tap at the window and a talking...squirrel? It sounds like its inviting you to a cafe! What do you order?",
-        image: "",
+        image: "assets/q2.webp",
         options: [
             {text: "A pumpkin spice latte brewed by the woodland creatures, with cinammon magic dusted on top.", type: "B"},
             {text: "An herbal tea to ground you. You need to relax after so much magical goodness!", type: "A"}
@@ -17,7 +17,7 @@ const quizQuestions = [
     },
     {
         question: "You discover a village hidden in the mist. A local vendor offers you a warm blanket as a welcome gift. Which do you choose?",
-        image: "",
+        image: "assets/q3.webp",
         options: [
             {text: "A knitted blanket woven by the vendor's wife. He says its her favorite.", type: "B"},
             {text: "A soft quilt that feels like home. It smells like cookies too!", type: "A"}
@@ -25,7 +25,7 @@ const quizQuestions = [
     },
     {
         question: "It starts to rain and everyone goes home. You go back to your enchanted cabin too. What's the first thing you do?",
-        image: "",
+        image: "assets/q4.webp",
         options: [
             {text: "Wrap yourself in your new blanket and sit in the cozy armchair.", type: "A"},
             {text: "Look for food in the magical pantry. All this exploring made you hungry!", type: "B"}
@@ -33,7 +33,7 @@ const quizQuestions = [
     },
     {
         question: "As night falls, an enchanted breeze blows through the cabin, carrying the scent of magic. What candle does it light for you?",
-        image: "",
+        image: "assets/q5.webp",
         options: [
             {text: "A woodsy scent that fills the room with the sound of different forest friends telling stories.", type: "A"},
             {text: "A sugary vanilla candle that reminds you of fresh baked treats!", type: "B"}
@@ -41,7 +41,7 @@ const quizQuestions = [
     },
     {
         question: "You wake up to the sound of birds chirping and the TV playing. You realize you're back in your room...",
-        image: "",
+        image: "assets/q6.webp",
         options: [
             {text: "I wish to go back! (The door magically appears once again)", type: "_B"},
             {text: "That...was a crazy dream.", type: "_A"}
@@ -73,6 +73,12 @@ function showQuestion() {
 
     // Get the current question from quizQuestions
     const questionObj = quizQuestions[currentQuestion];
+
+
+    const imageElement = document.createElement('img');
+    imageElement.src = questionObj.image;
+    imageElement.classList.add('question-image');
+    quizContainer.appendChild(imageElement);
 
     // Question element
     const questionElement = document.createElement('div');
@@ -140,7 +146,7 @@ function showResults() {
     if (optionCounts.B == 4) {
         resultText = "The Whimsical Adventurer"; // Most answers B -> level 5
         chaosLevel = '5';
-        description = 'Here comes the merry maker of mischief! You thrive on spontaneity, always ready to embark on delightful escapades. With a flair for themed gatherings and a love for cozy cafes, you sprinkle a touch of magic wherever you go. Whether it’s a costumed movie night or a spontaneous adventure, you infuse joy and laughter into every cozy moment!';
+        description = 'Here comes the merry maker of mischief! You thrive on spontaneity, always ready to embark on delightful escapades. With a flair for themed gatherings and a love for cozy cafes, you sprinkle a touch of magic wherever you go. Whether it\'s a costumed movie night or a spontaneous adventure, you infuse joy and laughter into every cozy moment!';
     } else if (optionCounts.B == 5 && optionCounts._B == 1) {
         resultText = "The Festive Host"; // Mostly B plus B boost -> level 6
         chaosLevel = '6';
